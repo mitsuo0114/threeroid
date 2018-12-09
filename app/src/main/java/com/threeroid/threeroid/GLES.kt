@@ -108,10 +108,14 @@ object GLES {
 
     fun makeFloatArray(x: Float, y: Float, w: Float, h: Float, for_texture : Boolean = true): FloatArray {
         //ウィンドウ座標を正規化デバイス座標に変換
-        val left = x / screenW.toFloat() * 2.0f - 1.0f
-        var top = y / screenH.toFloat() * 2.0f - 1.0f
-        val right = (x + w) / screenW.toFloat() * 2.0f - 1.0f
-        var bottom = (y + h) / screenH.toFloat() * 2.0f - 1.0f
+//        val left = x / screenW.toFloat() * 2.0f - 1.0f
+//        var top = y / screenH.toFloat() * 2.0f - 1.0f
+//        val right = (x + w) / screenW.toFloat() * 2.0f - 1.0f
+//        var bottom = (y + h) / screenH.toFloat() * 2.0f - 1.0f
+        val left = x / screenW.toFloat() * 2.0f
+        var top = y / screenH.toFloat() * 2.0f
+        val right = (x + w) / screenW.toFloat() * 2.0f
+        var bottom = (y + h) / screenH.toFloat() * 2.0f
         top = -top
         bottom = -bottom
 

@@ -1,8 +1,11 @@
 package com.threeroid.threeroid
 
+import android.opengl.GLES31
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.StrictMode
+import java.nio.ByteBuffer
+import java.nio.ByteOrder
 
 class MainActivity : AppCompatActivity() {
 
@@ -35,11 +38,19 @@ class MainActivity : AppCompatActivity() {
         val camera = PerspectiveCamera(45, 0.5)
         camera.position.set(0, 0, 100)
 
-        val geometry = BoxGeometry(400, 400, 400)
+        val geometry = BoxGeometry(400f, 400f, 400f)
         val material = MeshNormalMaterial()
         val box = Mesh(geometry, material)
-
+        box.position.set(300f, 300f, 300f)
         scene.add(box)
+
+        val geometry2 = BoxGeometry(400f, 400f, 400f)
+        val material2 = MeshNormalMaterial()
+        val box2 = Mesh(geometry2, material2)
+        box2.position.set(-300f, -300f, -300f)
+        scene.add(box2)
+
+        renderer.render(scene, camera)
         renderer.setRenderLoop(fun() {
             // requestAnimationFrame(render) : TODO check necessity
             box.rotation.z += 0.01f
