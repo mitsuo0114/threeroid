@@ -2,14 +2,18 @@ package com.threeroid.threeroid
 
 import android.opengl.GLES31
 import android.opengl.GLSurfaceView
+import java.nio.ByteBuffer
+import java.nio.ByteOrder
 
 import javax.microedition.khronos.egl.EGLConfig
 import javax.microedition.khronos.opengles.GL10
 
 class MyRenderer : GLSurfaceView.Renderer {
 
+    var drawCallback: (() -> Unit)? = null
     override fun onDrawFrame(unused: GL10) {
         GLES31.glClear(GLES31.GL_COLOR_BUFFER_BIT or GLES31.GL_DEPTH_BUFFER_BIT)
+        drawCallback?.invoke()
     }
 
     override fun onSurfaceChanged(unused: GL10, width: Int, height: Int) {
