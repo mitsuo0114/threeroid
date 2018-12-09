@@ -50,13 +50,10 @@ class MainActivity : AppCompatActivity() {
         box2.position.set(-300f, -300f, -300f)
         scene.add(box2)
 
-        renderer.render(scene, camera)
         renderer.setRenderLoop(fun() {
             // requestAnimationFrame(render) : TODO check necessity
-            box.rotation.z += 0.01f
-
+            // box.rotation.z += 0.01f
             renderer.render(scene, camera)
-
         })
     }
 

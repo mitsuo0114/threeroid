@@ -7,14 +7,12 @@ import java.nio.ByteOrder
 
 class OpenGLESRenderer(val canvas: GLSurfaceView, val myRenderer: MyRenderer) {
     fun setRenderLoop(function: () -> Unit) {
-
+        myRenderer.drawCallback = function
     }
 
     fun render(scene: Scene, camera: PerspectiveCamera) {
-        myRenderer.drawCallback = fun() {
-            scene.children.forEach {
-                it.draw()
-            }
+        scene.children.forEach {
+            it.draw()
         }
     }
 
