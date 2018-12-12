@@ -11,7 +11,7 @@ jobs:
       - checkout
       - run: echo ${ANDROID_NDK_VERSION} > _android_ndk_version
       - restore_cache:
-          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
+          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}-{{ checksum "app/jvm_build.gradle.kts" }}
       - restore_cache:
           key: android_ndk_{{ checksum "_android_ndk_version" }}
       - run:
@@ -27,13 +27,16 @@ jobs:
           paths:
             - /opt/android/sdk/ndk
           key: android_ndk_{{checksum "_android_ndk_version"}}
-      - save_cache:
-          paths:
-            - ~/.gradle
-          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
+      - run:
+          name: Run JVM Tests
+          command: ./gradlew -b app/jvm_build.gradle.kts test
       - run:
           name: Run Tests
           command: ./gradlew lint test
+      - save_cache:
+          paths:
+            - ~/.gradle
+          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}-{{ checksum "app/jvm_build.gradle.kts" }}
       - store_artifacts:
           path: app/build/reports
           destination: reports
