@@ -1,13 +1,15 @@
 package com.threeroid.threeroid
 
-import android.opengl.GLES31
 import java.nio.ByteBuffer
+import android.opengl.GLES31
 import java.nio.ByteOrder
+import com.threeroid.threeroid.math.Vector3
+
 
 class BoxGeometry(var width: Float, var height: Float, var depth: Float) {
     val line_mode = GLES31.GL_TRIANGLE_FAN
 
-    fun draw(position : Point) {
+    fun draw(position : Vector3) {
         val line_color = floatArrayOf(0.0f, 0.0f, 0.0f, 1.0f)
         val vertices = GLES.makeFloatArray(position.x, position.y, this.width, this.height, for_texture = false)
 

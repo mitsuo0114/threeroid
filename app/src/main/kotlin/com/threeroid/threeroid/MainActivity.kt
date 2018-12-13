@@ -36,7 +36,7 @@ class MainActivity : Activity() {
 
         val scene = Scene();
         val camera = PerspectiveCamera(45, 0.5)
-        camera.position.set(0, 0, 100)
+        camera.position.set(0f, 0f, 100f)
 
         val geometry = BoxGeometry(400f, 400f, 400f)
         val material = MeshNormalMaterial()
