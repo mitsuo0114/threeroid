@@ -71,6 +71,11 @@ tasks {
             includeEngines("junit-jupiter")
         }
         testLogging.events = setOf(TestLogEvent.PASSED, TestLogEvent.SKIPPED, TestLogEvent.FAILED)
+
+        doLast {
+            println("Deleting ${base_path}main/kotlin/com/threeroid/threeroid/R.kt")
+            File("${base_path}main/kotlin/com/threeroid/threeroid/R.kt").deleteRecursively()
+        }
     }
 }
 
