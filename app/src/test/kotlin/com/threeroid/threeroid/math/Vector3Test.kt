@@ -7,7 +7,7 @@ import org.junit.Assert.*
 class Vector3Test {
 
     @Test
-    fun target_equalities() {
+    fun equalities() {
         val target1 = Vector3()
         val target2 = Vector3(0.0f, 0.0f, 0.0f)
         val target3 = Vector3(0, 0, 0)
