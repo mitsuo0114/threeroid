@@ -4,6 +4,7 @@ import android.app.Activity
 import android.os.Bundle
 import android.os.StrictMode
 import com.threeroid.threeroid.cameras.PerspectiveCamera
+import com.threeroid.threeroid.helper.GridHelper
 import com.threeroid.threeroid.materials.MeshNormalMaterial
 import com.threeroid.threeroid.objects.Mesh
 
@@ -43,6 +44,9 @@ class MainActivity : Activity() {
         val box = Mesh(geometry, material)
         box.position.set(0.0f, 0.0f, 0.0f)
         scene.add(box)
+
+        var grid = GridHelper(100, 50)
+        scene.add(grid)
 
 //        val geometry2 = BoxGeometry(10f, 10f, 10f)
 //        val material2 = MeshNormalMaterial()

@@ -6,9 +6,7 @@ import java.nio.ByteOrder
 import com.threeroid.threeroid.math.Vector3
 
 
-class BoxGeometry(var width: Float, var height: Float, var depth: Float) {
-    val line_mode = GLES31.GL_TRIANGLE_FAN
-
+class BoxGeometry(var width: Float, var height: Float, var depth: Float) : BufferGeometry{
     fun floatArray(position : Vector3) : FloatArray{
         return floatArrayOf(
             position.x, position.y, position.z,
@@ -17,7 +15,7 @@ class BoxGeometry(var width: Float, var height: Float, var depth: Float) {
             position.x + this.height, position.y, position.z)
     }
 
-    fun draw(position : Vector3, rotation: Vector3) {
+    override fun draw(position : Vector3, rotation: Vector3) {
         val line_color = floatArrayOf(0.0f, 0.0f, 0.0f, 1.0f)
         val vertices = this.floatArray(position)
         GLES31.glEnableVertexAttribArray(GLES.positionHandle)
@@ -32,7 +30,7 @@ class BoxGeometry(var width: Float, var height: Float, var depth: Float) {
         vertexBuffer.position(0)
 
         GLES31.glVertexAttribPointer(GLES.positionHandle, 3, GLES31.GL_FLOAT, false, 0, vertexBuffer);
-        GLES31.glDrawArrays(line_mode, 0, vertices.size / 3)
+        GLES31.glDrawArrays(GLES31.GL_TRIANGLE_FAN, 0, vertices.size / 3)
         GLES31.glDisableVertexAttribArray(GLES.colorHandle)
         GLES31.glDisableVertexAttribArray(GLES.positionHandle)
     }

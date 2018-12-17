@@ -1,9 +1,11 @@
 package com.threeroid.threeroid.objects
 import com.threeroid.threeroid.BoxGeometry
+import com.threeroid.threeroid.BufferGeometry
 import com.threeroid.threeroid.materials.MeshNormalMaterial
 import com.threeroid.threeroid.math.Vector3
 
-class Mesh(var geometry: BoxGeometry, var material: MeshNormalMaterial) {
+open class Mesh(var geometry: BufferGeometry, var material: MeshNormalMaterial) {
+
     val rotation = Vector3()
     val position = Vector3()
 
