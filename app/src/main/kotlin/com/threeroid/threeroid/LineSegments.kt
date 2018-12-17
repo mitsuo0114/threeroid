@@ -14,30 +14,15 @@ class LineSegments() : BufferGeometry {
     }
 
     fun floatArray(): FloatArray {
-        return floatArrayOf(
-            1.0f, -1.0f, 0f,
-            0f, 0f, 0f,
-            0.8f, -1.0f, 0f,
-            0f, 0f, 0f,
-            0.6f, -1.0f, 0f,
-            0f, 0f, 0f,
-            0.4f, -1.0f, 0f,
-            0f, 0f, 0f,
-            0.2f, -1.0f, 0f,
-            0f, 0f, 0f,
-
-            1.0f, 1.0f, 0f,
-            0f, 0f, 0f,
-            1.0f, 0.8f, 0f,
-            0f, 0f, 0f,
-            1.0f, 0.6f, 0f,
-            0f, 0f, 0f,
-            1.0f, 0.4f, 0f,
-            0f, 0f, 0f,
-            1.0f, 0.2f, 0f,
-            0f, 0f, 0f
-        )
+        val tmp = mutableListOf<Float>()
+        for (line in lineDistances) {
+            tmp.add(line.x)
+            tmp.add(line.y)
+            tmp.add(line.z)
+        }
+        return tmp.toFloatArray()
     }
+
 
     override fun draw(position: Vector3, rotation: Vector3) {
         val line_color = floatArrayOf(0.0f, 0.0f, 0.0f, 1.0f)
