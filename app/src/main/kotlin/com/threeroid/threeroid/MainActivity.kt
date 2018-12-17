@@ -1,11 +1,11 @@
 package com.threeroid.threeroid
 
-import android.opengl.GLES31
 import android.app.Activity
 import android.os.Bundle
 import android.os.StrictMode
-import java.nio.ByteBuffer
-import java.nio.ByteOrder
+import com.threeroid.threeroid.cameras.PerspectiveCamera
+import com.threeroid.threeroid.materials.MeshNormalMaterial
+import com.threeroid.threeroid.objects.Mesh
 
 class MainActivity : Activity() {
 

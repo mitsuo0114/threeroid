@@ -1,9 +1,7 @@
 package com.threeroid.threeroid
 
-import android.opengl.GLES31
 import android.opengl.GLSurfaceView
-import java.nio.ByteBuffer
-import java.nio.ByteOrder
+import com.threeroid.threeroid.cameras.PerspectiveCamera
 
 class OpenGLESRenderer(val canvas: GLSurfaceView, val myRenderer: MyRenderer) {
     fun setRenderLoop(function: () -> Unit) {

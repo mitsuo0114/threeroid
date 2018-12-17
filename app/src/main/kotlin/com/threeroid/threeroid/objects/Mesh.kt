@@ -1,4 +1,6 @@
-package com.threeroid.threeroid
+package com.threeroid.threeroid.objects
+import com.threeroid.threeroid.BoxGeometry
+import com.threeroid.threeroid.materials.MeshNormalMaterial
 import com.threeroid.threeroid.math.Vector3
 
 class Mesh(var geometry: BoxGeometry, var material: MeshNormalMaterial) {

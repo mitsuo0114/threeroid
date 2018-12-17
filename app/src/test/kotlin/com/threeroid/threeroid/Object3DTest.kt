@@ -1,8 +1,7 @@
 package com.threeroid.threeroid
 
+import com.threeroid.threeroid.core.Object3D
 import org.junit.jupiter.api.Test
-
-import org.junit.Assert.*
 
 class Object3DTest {
 

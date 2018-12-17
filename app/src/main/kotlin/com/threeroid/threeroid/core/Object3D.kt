@@ -1,4 +1,4 @@
-package com.threeroid.threeroid
+package com.threeroid.threeroid.core
 
 import com.threeroid.threeroid.math.Euler
 import com.threeroid.threeroid.math.Quaternion
