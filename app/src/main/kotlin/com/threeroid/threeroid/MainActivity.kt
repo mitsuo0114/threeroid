@@ -34,25 +34,26 @@ class MainActivity : Activity() {
         //  renderer.setPixelRatio() TODO: check what this func do
         //  renerer.setSize() Don't have to use this.
 
-        val scene = Scene();
+        val scene = Scene()
         val camera = PerspectiveCamera(45, 0.5)
         camera.position.set(0f, 0f, 100f)
 
-        val geometry = BoxGeometry(400f, 400f, 400f)
+        val geometry = BoxGeometry(1f, 1f, 1f)
         val material = MeshNormalMaterial()
         val box = Mesh(geometry, material)
-        box.position.set(300f, 300f, 300f)
+        box.position.set(0.0f, 0.0f, 0.0f)
         scene.add(box)
 
-        val geometry2 = BoxGeometry(400f, 400f, 400f)
-        val material2 = MeshNormalMaterial()
-        val box2 = Mesh(geometry2, material2)
-        box2.position.set(-300f, -300f, -300f)
-        scene.add(box2)
+//        val geometry2 = BoxGeometry(10f, 10f, 10f)
+//        val material2 = MeshNormalMaterial()
+//        val box2 = Mesh(geometry2, material2)
+//        box2.position.set(-1.0f, -1.0f, -1.0f)
+//        scene.add(box2)
 
         renderer.setRenderLoop(fun() {
             // requestAnimationFrame(render) : TODO check necessity
-            // box.rotation.z += 0.01f
+            box.position.x -= 0.0025f
+            box.position.y -= 0.0025f
             renderer.render(scene, camera)
         })
     }

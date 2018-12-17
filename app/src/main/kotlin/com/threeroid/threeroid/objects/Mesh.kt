@@ -8,6 +8,6 @@ class Mesh(var geometry: BoxGeometry, var material: MeshNormalMaterial) {
     val position = Vector3()
 
     fun draw() {
-        this.geometry.draw(this.position)
+        this.geometry.draw(this.position, this.rotation)
     }
 }
