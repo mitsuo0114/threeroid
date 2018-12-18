@@ -10,7 +10,7 @@ class Matrix4Test {
     fun initiate() {
         val target1 = Matrix4()
 
-        assertTrue(target1.elements[0] == 1)
+        assertTrue(target1.elements[0] == 1f)
     }
 
     @Test
@@ -24,22 +24,22 @@ class Matrix4Test {
             12, 13, 14, 15
         )
 
-        assertTrue(target1.elements[0] == 0)
-        assertTrue(target1.elements[1] == 4)
-        assertTrue(target1.elements[2] == 8)
-        assertTrue(target1.elements[3] == 12)
-        assertTrue(target1.elements[4] == 1)
-        assertTrue(target1.elements[5] == 5)
-        assertTrue(target1.elements[6] == 9)
-        assertTrue(target1.elements[7] == 13)
-        assertTrue(target1.elements[8] == 2)
-        assertTrue(target1.elements[9] == 6)
-        assertTrue(target1.elements[10] == 10)
-        assertTrue(target1.elements[11] == 14)
-        assertTrue(target1.elements[12] == 3)
-        assertTrue(target1.elements[13] == 7)
-        assertTrue(target1.elements[14] == 11)
-        assertTrue(target1.elements[15] == 15)
+        assertTrue(target1.elements[0] == 0f)
+        assertTrue(target1.elements[1] == 4f)
+        assertTrue(target1.elements[2] == 8f)
+        assertTrue(target1.elements[3] == 12f)
+        assertTrue(target1.elements[4] == 1f)
+        assertTrue(target1.elements[5] == 5f)
+        assertTrue(target1.elements[6] == 9f)
+        assertTrue(target1.elements[7] == 13f)
+        assertTrue(target1.elements[8] == 2f)
+        assertTrue(target1.elements[9] == 6f)
+        assertTrue(target1.elements[10] == 10f)
+        assertTrue(target1.elements[11] == 14f)
+        assertTrue(target1.elements[12] == 3f)
+        assertTrue(target1.elements[13] == 7f)
+        assertTrue(target1.elements[14] == 11f)
+        assertTrue(target1.elements[15] == 15f)
 
     }
 

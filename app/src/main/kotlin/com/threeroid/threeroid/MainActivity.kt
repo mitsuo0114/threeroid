@@ -36,8 +36,8 @@ class MainActivity : Activity() {
         //  renerer.setSize() Don't have to use this.
 
         val scene = Scene()
-        val camera = PerspectiveCamera(45, 0.5)
-        camera.position.set(0f, 0f, 100f)
+        val camera = PerspectiveCamera(45f, 0.5f)
+//        camera.position.set(0f, 0f, 100f)
 
         val geometry = BoxGeometry(1f, 1f, 1f)
         val material = MeshNormalMaterial()
