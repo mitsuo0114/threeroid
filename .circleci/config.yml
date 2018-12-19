@@ -40,6 +40,11 @@ jobs:
           name: Run Tests
           command: ./gradlew lint test
       - run:
+          name: Build debug APK and release APK
+          command: |
+            ./gradlew :app:assembleDebug
+            ./gradlew :app:assembleDebugAndroidTest
+      - run:
           name: Run Tests for Coverage
           command: ./gradlew connectedCheck jacocoTestReport
       - run:
