@@ -39,6 +39,12 @@ jobs:
       - run:
           name: Run Tests
           command: ./gradlew lint test
+      - run:
+          name: Run Tests for Coverage
+          command: ./gradlew connectedCheck jacocoTestReport
+      - run:
+          name: Post to Codecov
+          command: bash <(curl -s https://codecov.io/bash)
       - save_cache:
           paths:
             - ~/.gradle
