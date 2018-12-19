@@ -10,6 +10,7 @@ import org.gradle.api.tasks.testing.logging.TestLogEvent
 plugins {
     kotlin("jvm") version "1.2.71"
     id("org.jlleitschuh.gradle.ktlint") version "6.3.1"
+    id("io.gitlab.arturbosch.detekt") version "1.0.0-RC12"
 }
 
 repositories {
