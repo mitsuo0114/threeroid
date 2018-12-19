@@ -8,7 +8,6 @@ import android.content.Context
 class MyGLSurfaceView : GLSurfaceView {
 
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {
-
     }
 
     constructor(context: Context) : super(context) {
@@ -20,5 +19,4 @@ class MyGLSurfaceView : GLSurfaceView {
     override fun onTouchEvent(event: MotionEvent?): Boolean {
         return super.onTouchEvent(event)
     }
-
 }

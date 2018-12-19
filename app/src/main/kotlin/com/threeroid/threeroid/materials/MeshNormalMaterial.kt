@@ -1,5 +1,3 @@
 package com.threeroid.threeroid.materials
 
-class MeshNormalMaterial {
-
-}
+class MeshNormalMaterial

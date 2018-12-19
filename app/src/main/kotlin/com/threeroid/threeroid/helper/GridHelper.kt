@@ -12,7 +12,7 @@ class GridHelper(size: Int, divisions: Int, color1: Int = 0x444444, color2: Int 
         fun computeLineDistances(size: Int, divisions: Int): LineSegments {
             val center = divisions / 2
             val step = size / divisions
-            var halfSize = 0.2f //size / 2
+            var halfSize = 0.2f // size / 2
 
             val lineSegment = LineSegments()
             var i = 0
@@ -43,5 +43,4 @@ class GridHelper(size: Int, divisions: Int, color1: Int = 0x444444, color2: Int 
             return lineSegment
         }
     }
-
 }

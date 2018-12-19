@@ -14,10 +14,7 @@ class PerspectiveCamera(var fov: Float = 50f, var aspect: Float = 1f, var near: 
         var offsetY: Float = 0f,
         var width: Float = 1f,
         var height: Float = 1f
-    ) {
-
-    }
-
+    )
 
     var view: ViewConfig = ViewConfig()
     var zoom: Float = 1f
@@ -48,23 +45,19 @@ class PerspectiveCamera(var fov: Float = 50f, var aspect: Float = 1f, var near: 
         if (this.view !== null && this.view.enabled) {
 
             var fullWidth = view.fullWidth
-            var fullHeight = view.fullHeight;
+            var fullHeight = view.fullHeight
 
-            left += view.offsetX * width / fullWidth;
-            top -= view.offsetY * height / fullHeight;
-            width *= view.width / fullWidth;
-            height *= view.height / fullHeight;
-
+            left += view.offsetX * width / fullWidth
+            top -= view.offsetY * height / fullHeight
+            width *= view.width / fullWidth
+            height *= view.height / fullHeight
         }
 
-        var skew = this.filmOffset;
-        if (skew != 0f) left += near * skew / this.getFilmWidth();
+        var skew = this.filmOffset
+        if (skew != 0f) left += near * skew / this.getFilmWidth()
 
         this.projectionMatrix.makePerspective(left, left + width, top, top - height, near, this.far)
 
-        this.projectionMatrixInverse.getInverse(this.projectionMatrix);
-
+        this.projectionMatrixInverse.getInverse(this.projectionMatrix)
     }
-
-
 }

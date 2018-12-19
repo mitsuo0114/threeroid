@@ -2,7 +2,7 @@ package com.threeroid.threeroid.math
 
 import org.junit.jupiter.api.Test
 
-import org.junit.Assert.*
+import org.junit.Assert.assertTrue
 
 class QuaternionTest {
 

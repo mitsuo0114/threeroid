@@ -17,5 +17,4 @@ class OpenGLESRenderer(val canvas: GLSurfaceView, val myRenderer: MyRenderer) {
     init {
         canvas.setRenderer(myRenderer)
     }
-
 }

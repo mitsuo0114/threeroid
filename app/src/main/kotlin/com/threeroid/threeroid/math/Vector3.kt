@@ -12,7 +12,6 @@ data class Vector3(var x: Float = 0.0f, var y: Float = 0.0f, var z: Float = 0.0f
         }
     }
 
-
     fun set(x: Float, y: Float, z: Float): Vector3 {
         this.x = x
         this.y = y
@@ -40,6 +39,4 @@ data class Vector3(var x: Float = 0.0f, var y: Float = 0.0f, var z: Float = 0.0f
         this.z += other.z * scalar
         return this
     }
-
-
 }

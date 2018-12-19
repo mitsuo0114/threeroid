@@ -7,5 +7,4 @@ class Scene {
     fun add(box: Mesh) {
         children.add(box)
     }
-
 }

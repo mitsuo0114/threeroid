@@ -2,7 +2,8 @@ package com.threeroid.threeroid.math
 
 import org.junit.jupiter.api.Test
 
-import org.junit.Assert.*
+import org.junit.Assert.assertTrue
+import org.junit.Assert.assertFalse
 
 class EulerTest {
 
@@ -32,5 +33,4 @@ class EulerTest {
         assertTrue(target2.equals(target3))
         assertTrue(vec.equals(target3.toVector3()))
     }
-
 }

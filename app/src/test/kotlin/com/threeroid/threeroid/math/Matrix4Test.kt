@@ -2,7 +2,7 @@ package com.threeroid.threeroid.math
 
 import org.junit.jupiter.api.Test
 
-import org.junit.Assert.*
+import org.junit.Assert.assertTrue
 
 class Matrix4Test {
 
@@ -40,7 +40,5 @@ class Matrix4Test {
         assertTrue(target1.elements[13] == 7f)
         assertTrue(target1.elements[14] == 11f)
         assertTrue(target1.elements[15] == 15f)
-
     }
-
 }

@@ -9,5 +9,4 @@ class Object3DTest {
     fun create_target() {
         Object3D()
     }
-
 }

@@ -25,7 +25,6 @@ class MainActivity : Activity() {
                 .build())
         setContentView(R.layout.activity_main)
 
-
         // Example of a call to a native method
         //        sample_text.text = stringFromJNI()
     }
@@ -61,7 +60,6 @@ class MainActivity : Activity() {
             renderer.render(scene, camera)
         })
     }
-
 
     /**
      * A native method that is implemented by the 'native-lib' native library,

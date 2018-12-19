@@ -23,7 +23,6 @@ class LineSegments() : BufferGeometry {
         return tmp.toFloatArray()
     }
 
-
     override fun draw(position: Vector3, rotation: Vector3) {
         val line_color = floatArrayOf(0.0f, 0.0f, 0.0f, 1.0f)
         val vertices = this.floatArray()
@@ -38,11 +37,9 @@ class LineSegments() : BufferGeometry {
         vertexBuffer.put(vertices)
         vertexBuffer.position(0)
 
-        GLES31.glVertexAttribPointer(GLES.positionHandle, 3, GLES31.GL_FLOAT, false, 0, vertexBuffer);
+        GLES31.glVertexAttribPointer(GLES.positionHandle, 3, GLES31.GL_FLOAT, false, 0, vertexBuffer)
         GLES31.glDrawArrays(GLES31.GL_LINES, 0, vertices.size / 3)
         GLES31.glDisableVertexAttribArray(GLES.colorHandle)
         GLES31.glDisableVertexAttribArray(GLES.positionHandle)
     }
-
-
 }

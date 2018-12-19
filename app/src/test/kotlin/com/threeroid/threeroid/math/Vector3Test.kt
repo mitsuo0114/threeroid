@@ -2,7 +2,7 @@ package com.threeroid.threeroid.math
 
 import org.junit.jupiter.api.Test
 
-import org.junit.Assert.*
+import org.junit.Assert.assertTrue
 
 class Vector3Test {
 
@@ -59,5 +59,4 @@ class Vector3Test {
         assertTrue(result.y == 8.0f)
         assertTrue(result.z == 12.0f)
     }
-
 }

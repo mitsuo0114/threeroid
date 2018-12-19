@@ -2,8 +2,6 @@ package com.threeroid.threeroid
 
 import android.opengl.GLES31
 import android.opengl.GLSurfaceView
-import java.nio.ByteBuffer
-import java.nio.ByteOrder
 
 import javax.microedition.khronos.egl.EGLConfig
 import javax.microedition.khronos.opengles.GL10
@@ -23,7 +21,7 @@ class MyRenderer : GLSurfaceView.Renderer {
     }
 
     override fun onSurfaceCreated(unused: GL10, unused_: EGLConfig) {
-        //プログラムの生成
+        // プログラムの生成
         GLES.makeProgram()
 
         GLES31.glClearColor(1.0f, 1.0f, 1.0f, 1.0f)

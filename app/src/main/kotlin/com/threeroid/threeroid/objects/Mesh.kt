@@ -1,5 +1,4 @@
 package com.threeroid.threeroid.objects
-import com.threeroid.threeroid.BoxGeometry
 import com.threeroid.threeroid.BufferGeometry
 import com.threeroid.threeroid.materials.MeshNormalMaterial
 import com.threeroid.threeroid.math.Vector3
