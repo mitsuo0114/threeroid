@@ -28,6 +28,9 @@ jobs:
             - /opt/android/sdk/ndk
           key: android_ndk_{{checksum "_android_ndk_version"}}
       - run:
+          name: Run ktlint check
+          command: ./gradlew -b app/jvm_build.gradle.kts ktlintCheck
+      - run:
           name: Run JVM Tests
           command: ./gradlew -b app/jvm_build.gradle.kts test
       - run:
