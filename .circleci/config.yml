@@ -27,9 +27,9 @@ jobs:
           paths:
             - /opt/android/sdk/ndk
           key: android_ndk_{{checksum "_android_ndk_version"}}
-      - run:
-          name: Run detekt check
-          command: ./gradlew -b app/jvm_build.gradle.kts detekt; exit 0;
+      #- run:
+      #    name: Run detekt check
+      #    command: ./gradlew -b app/jvm_build.gradle.kts detekt
       - run:
           name: Run ktlint check
           command: ./gradlew -b app/jvm_build.gradle.kts ktlintCheck
